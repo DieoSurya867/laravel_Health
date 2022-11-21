@@ -26,6 +26,7 @@ Route::resource('admin/artikel', ArtikelController::class)->middleware('auth');
 Route::resource('admin/kategori', KategoriController::class)->middleware('auth');
 Route::resource('admin/user', UserController::class)->middleware('auth');
 Route::resource('admin/dashboard', BmiController::class)->middleware('auth');
+Route::get('admin/lokasi', [BmiController::class, 'letak'])->middleware('auth');
 Route::get('deleteartikel/{id}', [ArtikelController::class, 'destroy'])->name('deleteartikel');
 Route::get('deletekategori/{id}', [KategoriController::class, 'destroy'])->name('deletekategori');
 Route::get('deleteuser/{id}', [UserController::class, 'destroy'])->name('deleteuser');

@@ -18,6 +18,12 @@ class BmiController extends Controller
         return view('pages.admin.bmi', compact('bmi'));
     }
 
+    public function letak()
+    {
+        $bmi = Bmi::all();
+        return view('pages.admin.letak', compact('bmi'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
